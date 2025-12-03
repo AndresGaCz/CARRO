@@ -16,28 +16,28 @@
     <h3>ROVER DEMOS</h3>
     <div id="connection-status" class="text-center mb-3 text-danger">🔴 Desconectado</div>
 
-    <div class="d-flex justify-content-center gap-2 mb-4">
-        <a href="index.html" class="btn btn-outline-light">Control</a>
-        <a href="monitor.html" class="btn btn-outline-light">Monitoreo</a>
-        <a href="demos.html" class="btn btn-primary active">Demos</a>
+    <div class="d-flex justify-content-center gap-2 mb-3">
+        <a href="control.html" class="btn btn-outline-light btn-sm">Control</a>
+        <a href="monitor.html" class="btn btn-outline-light btn-sm">Monitoreo</a>
+        <a href="demos.html" class="btn btn-primary btn-sm active">Demos</a>
     </div>
 
-    <div class="status-box mb-4" style="border: 1px solid #ff9800;">
-        <h5 class="text-warning">Grabadora de Secuencias</h5>
+    <div class="status-box mb-2" style="border: 1px solid #ff9800; padding: 10px;">
+        <h6 class="text-warning m-0 mb-2">Grabadora de Secuencias</h6>
         
         <div id="recorder-controls">
-            <button class="btn btn-danger w-100 mb-2" onclick="iniciarGrabacion()" id="btn-rec">🔴 INICIAR GRABACIÓN</button>
+            <button class="btn btn-danger btn-sm w-100" onclick="iniciarGrabacion()" id="btn-rec">🔴 INICIAR GRABACIÓN</button>
         </div>
         
         <div id="save-controls" style="display:none;">
-            <div class="text-success mb-2">● GRABANDO... Usa los botones de abajo</div>
-            <button class="btn btn-secondary w-100 mb-2" onclick="detenerGrabacion()">⏹ DETENER Y GUARDAR</button>
+            <div class="text-success mb-1" style="font-size: 0.9em;">● GRABANDO...</div>
+            <button class="btn btn-secondary btn-sm w-100" onclick="detenerGrabacion()">⏹ DETENER Y GUARDAR</button>
         </div>
         
-        <small class="text-muted" id="rec-status">Estado: Esperando...</small>
+        <small class="text-muted" id="rec-status" style="font-size: 0.8em;">Estado: Esperando...</small>
     </div>
 
-    <div class="control-pad mb-4">
+    <div class="control-pad mini-pad mb-3">
         <button class="btn btn-control" onclick="enviarComando('IZQ_ADELANTE')">↖️</button>
         <button class="btn btn-control" onclick="enviarComando('ADELANTE')">⬆️</button>
         <button class="btn btn-control" onclick="enviarComando('DER_ADELANTE')">↗️</button>
@@ -46,17 +46,17 @@
         <button class="btn btn-control btn-stop" onclick="enviarComando('STOP')">STOP</button>
         <button class="btn btn-control" onclick="enviarComando('DERECHA')">➡️</button>
         
-        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_IZQ')">90°↩️</button>
+        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_IZQ')">90°</button>
         <button class="btn btn-control" onclick="enviarComando('ATRAS')">⬇️</button>
-        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_DER')">↪️90°</button>
+        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_DER')">90°</button>
 
-        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_IZQ')">🔄 360</button>
+        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_IZQ')">360</button>
         <div style="visibility: hidden;"></div> 
-        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_DER')">360 🔃</button>
+        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_DER')">360</button>
     </div>
 
-    <hr>
-    <h6 class="mb-3">Demos Guardadas</h6>
+    <hr class="my-2">
+    <h6 class="mb-2">Demos Guardadas</h6>
     
     <div class="demos-container">
         <div class="d-grid gap-2" id="demos-list">
