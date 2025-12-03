@@ -137,4 +137,38 @@ h1, h2, h3, h4, h5, h6 {
 .demos-container::-webkit-scrollbar-thumb {
     background-color: #00d4ff;
     border-radius: 4px;
+
+}
+
+/* === ESTILOS ESPECÍFICOS PARA LA PÁGINA DE DEMOS === */
+
+/* 1. Botonera Compacta (Mini Pad) */
+.mini-pad {
+    gap: 5px;           /* Menos espacio entre botones */
+    margin-top: 10px;   /* Menos margen arriba */
+    margin-bottom: 10px;
+}
+
+.mini-pad .btn-control {
+    height: 40px;       /* Mucho más bajos (antes 70px) */
+    font-size: 18px;    /* Iconos más pequeños */
+    line-height: 1;     /* Centrado vertical */
+    padding: 0;         /* Sin relleno extra */
+}
+
+/* 2. Lista de Demos más Grande */
+.demos-container {
+    /* Aumentamos de 200px a 350px (o lo que quepa) */
+    max-height: 350px;       
+    min-height: 200px;
+    
+    /* Mismos estilos de antes */
+    overflow-y: auto;        
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    scrollbar-width: thin;
+    scrollbar-color: #00d4ff rgba(0,0,0,0.3);
 }
