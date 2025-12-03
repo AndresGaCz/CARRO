@@ -1,0 +1,140 @@
+/* === CONFIGURACIÓN GENERAL === */
+body {
+    background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Azul Profundo */
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.main-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1); /* Efecto Cristal */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === PESTAÑAS === */
+.nav-pills .nav-link {
+    color: #fff;
+    border: 1px solid #00d4ff;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #00d4ff;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00d4ff;
+}
+
+/* === BOTONES DE CONTROL === */
+.control-pad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn-control {
+    height: 70px;
+    border-radius: 15px;
+    font-size: 24px;
+    background: rgba(0, 212, 255, 0.2);
+    border: 2px solid #00d4ff;
+    color: white;
+    transition: all 0.1s;
+}
+
+.btn-control:active {
+    background: #00d4ff;
+    color: black;
+    transform: scale(0.95);
+}
+
+.btn-stop {
+    background: rgba(255, 0, 85, 0.3);
+    border-color: #ff0055;
+    font-weight: bold;
+}
+.btn-stop:active { background: #ff0055; }
+
+/* === MONITOREO Y LOGS === */
+.status-box {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.log-console {
+    background: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    height: 150px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.form-check-input:checked {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
+}
+
+.demo-btn {
+    text-align: left;
+    border-color: rgba(255,255,255,0.5);
+    transition: 0.3s;
+}
+.demo-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+}
+
+/* === CAJA DE DEMOS CON SCROLL === */
+.demos-container {
+    max-height: 200px;        /* Altura máxima fija */
+    overflow-y: auto;         /* Scroll automático si se pasa */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Estilo del scrollbar para que se vea bonito (Webkit) */
+    scrollbar-width: thin;
+    scrollbar-color: #00d4ff rgba(0,0,0,0.3);
+}
+
+/* Scrollbar personalizado para Chrome/Edge */
+.demos-container::-webkit-scrollbar {
+    width: 8px;
+}
+.demos-container::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+.demos-container::-webkit-scrollbar-thumb {
+    background-color: #00d4ff;
+    border-radius: 4px;
+}

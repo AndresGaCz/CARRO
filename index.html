@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover - Control</title>
+    <link rel="icon" type="image/png" href="icons.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+    <h3>ROVER CONTROL</h3>
+    <div id="connection-status" class="text-center mb-3 text-danger">🔴 Desconectado</div>
+
+    <div class="d-flex justify-content-center gap-2 mb-4">
+        <a href="index.html" class="btn btn-primary active">Control</a>
+        <a href="monitor.html" class="btn btn-outline-light">Monitoreo</a>
+        <a href="demos.html" class="btn btn-outline-light">Demos</a>
+    </div>
+
+    <div class="control-pad">
+        <button class="btn btn-control" onclick="enviarComando('IZQ_ADELANTE')">↖️</button>
+        <button class="btn btn-control" onclick="enviarComando('ADELANTE')">⬆️</button>
+        <button class="btn btn-control" onclick="enviarComando('DER_ADELANTE')">↗️</button>
+        
+        <button class="btn btn-control" onclick="enviarComando('IZQUIERDA')">⬅️</button>
+        <button class="btn btn-control btn-stop" onclick="enviarComando('STOP')">STOP</button>
+        <button class="btn btn-control" onclick="enviarComando('DERECHA')">➡️</button>
+        
+        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_IZQ')">90°↩️</button>
+        <button class="btn btn-control" onclick="enviarComando('ATRAS')">⬇️</button>
+        <button class="btn btn-control" style="border-color: #ff9800; color: #ff9800;" onclick="enviarComando('90_DER')">↪️90°</button>
+
+        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_IZQ')">🔄 360</button>
+        <div style="visibility: hidden;"></div> 
+        <button class="btn btn-control" onclick="enviarComando('GIRAR_360_DER')">360 🔃</button>
+    </div>
+
+    <div class="status-box mt-4" style="border: 1px solid #00d4ff;">
+        <label class="form-label text-info">⚡ Selector de Velocidad</label>
+        <div class="btn-group w-100" role="group">
+            <button type="button" class="btn btn-outline-info active" onclick="setVelocidad('MID')" id="btn-mid">🚗 Baja</button>
+            <button type="button" class="btn btn-outline-info" onclick="setVelocidad('HIGH')" id="btn-high">🚀 Alta</button>
+        </div>
+        <small class="text-muted d-block mt-2" id="vel-desc">Modo Normal: Equilibrio</small>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
